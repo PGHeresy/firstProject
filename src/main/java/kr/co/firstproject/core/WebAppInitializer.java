@@ -2,6 +2,7 @@ package kr.co.firstproject.core;
 
 import kr.co.firstproject.core.config.AppConfig;
 import kr.co.firstproject.core.config.WebServletConfig;
+import kr.co.firstproject.core.security.config.SecurityConfig;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
@@ -10,7 +11,7 @@ import javax.servlet.Filter;
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{AppConfig.class};
+        return new Class[]{AppConfig.class, SecurityConfig.class};
     }
 
     protected Class<?>[] getServletConfigClasses() {
